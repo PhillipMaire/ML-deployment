@@ -12,3 +12,4 @@ mlruns/
 GETTING_STARTED.txt
 .env
 .env
+/.venv
