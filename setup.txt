@@ -1,0 +1,18 @@
+python3.9 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip setuptools wheel
+
+pip install -r requirements.txt
+
+
+pip install tensorflow==2.13.0
+pip install tensorboard-plugin-wit==1.8.1
+
+
+tensorflow==2.13.0
+tensorboard-plugin-wit==1.6.1
+
+
+
+cd production-ML-deployment
+python3 pipelines/production-pipeline.py --experiment-name "my_first_test"

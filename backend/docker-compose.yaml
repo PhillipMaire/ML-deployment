@@ -1,3 +1,10 @@
+# cd backend/mlflow
+# docker-compose build
+# docker-compose up --remove-orphans --force-recreate -d
+
+# http://0.0.0.0:5001
+# http://localhost:9001/
+
 services:
   optuna-postgres:
     image: postgres
@@ -53,7 +60,7 @@ services:
         - create-mlflow-bucket
         - mlflow-postgres
     ports:
-        - "5000:5000"
+        - "5001:5000"
     environment:
         - MLFLOW_S3_ENDPOINT_URL=http://minio:9000
         - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
